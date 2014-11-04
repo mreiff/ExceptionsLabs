@@ -23,6 +23,9 @@ public class NameService {
             throw new IllegalArgumentException("Name can't be null.");
         }
         String[] nameParts = fullName.split(" ");
+        if(nameParts.length != 2){
+            throw new IllegalArgumentException("First and Last Name only!");
+        }
         return nameParts[nameParts.length - 1];
     }
     
@@ -38,6 +41,9 @@ public class NameService {
             throw new IllegalArgumentException("Name can't be null.");
         }
         String[] nameParts = fullName.split(" ");
+        if(nameParts.length != 2){
+            throw new IllegalArgumentException("First and Last Name only!");
+        }
         return nameParts[FIRST_NAME_IDX];
     }
 
