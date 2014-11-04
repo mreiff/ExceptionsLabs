@@ -24,7 +24,7 @@ public class InputOutputGui {
         String msg = "Your last name is: " + lastName;
         JOptionPane.showMessageDialog(null, msg);
         }catch (IllegalArgumentException e){
-            System.out.println("Please Enter a Full Name.");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
         
     }
