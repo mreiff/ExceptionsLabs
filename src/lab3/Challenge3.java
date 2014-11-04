@@ -11,9 +11,13 @@ package lab3;
  */
 public class Challenge3 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalArgumentException{
         
-        new InputOutputGui().startConversation();
+       try{
+           new InputOutputGui().startConversation();
+       }catch (IllegalArgumentException p){
+           System.out.println(p);
+       }
     }
     
 }

@@ -12,9 +12,13 @@ package lab2;
  */
 public class Challenge2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalArgumentException{
         
-        new InputOutputGui().startConversation();
+        try {
+            new InputOutputGui().startConversation();
+        }catch (IllegalArgumentException e){
+            System.out.println(e);
+        }
     }
     
 }
