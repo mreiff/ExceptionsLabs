@@ -18,7 +18,10 @@ public class NameService {
      * @param fullName - a name containing a first name and a last name
      * @return the last name
      */
-    public String extractLastName(String fullName) {
+    public String extractLastName(String fullName) throws IllegalArgumentException{
+        if(fullName == null || fullName.length() < 2){
+            throw new IllegalArgumentException("Name can't be null or less than 2 characters.");
+        }
         String[] nameParts = fullName.split(" ");
         return nameParts[LAST_NAME_IDX];
     }
@@ -30,7 +33,10 @@ public class NameService {
      * @param fullName - a name containing a first name and a last name
      * @return the first name
      */
-    public String extractFirstName(String fullName) {
+    public String extractFirstName(String fullName) throws IllegalArgumentException{
+        if(fullName == null || fullName.length() < 2){
+            throw new IllegalArgumentException("Name can't be null or less than 2 characters.");
+        }
         String[] nameParts = fullName.split(" ");
         return nameParts[FIRST_NAME_IDX];
     }
