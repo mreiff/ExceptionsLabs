@@ -9,6 +9,6 @@ package lab3;
  *
  * @author Matthew
  */
-public class ExeptionHandler {
+public class NamePartsLengthExceptionHandlerNOTUSED extends IllegalArgumentException{
     
 }

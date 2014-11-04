@@ -19,12 +19,12 @@ public class NameService {
      * @return the last name
      */
     public String extractLastName(String fullName) throws IllegalArgumentException{
-        if(fullName == null || fullName.length() < 2){
-            throw new IllegalArgumentException("Name can't be null or less than 2 characters.");
+        if(fullName == null){
+            throw new RequiredTextExceptionHandler();
         }
         String[] nameParts = fullName.split(" ");
         if(nameParts.length != 2){
-            throw new IllegalArgumentException("Only First and Last Name!");
+            throw new TextLengthExceptionHandler();
         }
         return nameParts[LAST_NAME_IDX];
     }
@@ -38,11 +38,11 @@ public class NameService {
      */
     public String extractFirstName(String fullName) throws IllegalArgumentException{
         if(fullName == null || fullName.length() < 2){
-            throw new IllegalArgumentException("Name can't be null or less than 2 characters.");
+            throw new RequiredTextExceptionHandler();
         }
         String[] nameParts = fullName.split(" ");
         if(nameParts.length != 2){
-            throw new IllegalArgumentException("Only First and Last Name!");
+            throw new TextLengthExceptionHandler();
         }
         return nameParts[FIRST_NAME_IDX];
     }
